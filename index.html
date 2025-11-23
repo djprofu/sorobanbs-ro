@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citire Rapidă - Panoul Profesorului</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1>🎯 Panoul Profesorului - Citire Rapidă</h1>
+            <p class="welcome-message">Bun venit! Alegeți modulul de lucru:</p>
+        </header>
+
+        <nav class="navigation-grid">
+            <a href="nivele/index.html" class="nav-card">
+                <div class="card-icon">📚</div>
+                <h3>Nivele de Dificultate</h3>
+                <p>Pregătitoare, Clasa I, Clasa a II-a</p>
+            </a>
+
+            <a href="jocuri/index.html" class="nav-card">
+                <div class="card-icon">🎮</div>
+                <h3>Jocuri Educative</h3>
+                <p>Exerciții interactive de citire</p>
+            </a>
+
+            <a href="materiale/index.html" class="nav-card">
+                <div class="card-icon">📁</div>
+                <h3>Materiale Didactice</h3>
+                <p>Încarcă și descarcă resurse</p>
+            </a>
+
+            <a href="jocuri-avansate/index.html" class="nav-card">
+                <div class="card-icon">🎵</div>
+                <h3>Jocuri Audio-Video</h3>
+                <p>Exerciții de ascultare și vizualizare</p>
+            </a>
+        </nav>
+
+        <div class="control-panel">
+            <h3>🔧 Control Rapid</h3>
+            <div class="quick-controls">
+                <button onclick="openSettings()">Setări Aplicație</button>
+                <button onclick="showStats()">Statistici Utilizare</button>
+                <button onclick="exportData()">Exportă Date</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

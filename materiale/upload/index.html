@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Încărcare Materiale - Citire Rapidă</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <a href="../index.html" class="back-button">← Înapoi la Materiale</a>
+            <h1>📤 Încărcare Materiale</h1>
+            <p>Încărcați resurse pentru cursurile de citire rapidă</p>
+        </header>
+
+        <div class="upload-container">
+            <!-- Zona de Drop -->
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-content">
+                    <div class="upload-icon">📁</div>
+                    <h3>Trageți fișierele aici</h3>
+                    <p>sau</p>
+                    <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                        Alegeți fișiere
+                    </button>
+                    <input type="file" id="fileInput" multiple accept=".pdf,.jpg,.jpeg,.png,.mp3,.mp4,.doc,.docx" style="display: none;">
+                    <p class="file-types">Suportă: PDF, JPG, PNG, MP3, MP4, DOC (Max. 50MB)</p>
+                </div>
+            </div>
+
+            <!-- Formular pentru detalii materiale -->
+            <div class="material-form" id="materialForm" style="display: none;">
+                <h3>📝 Detalii Material</h3>
+                
+                <div class="form-group">
+                    <label for="materialName">Nume material:</label>
+                    <input type="text" id="materialName" placeholder="Ex: Joc litere - Pregătitoare">
+                </div>
+
+                <div class="form-group">
+                    <label for="materialLevel">Nivel destinat:</label>
+                    <select id="materialLevel">
+                        <option value="">Selectează nivelul</option>
+                        <option value="pregatitoare">Pregătitoare</option>
+                        <option value="clasa-I">Clasa I</option>
+                        <option value="clasa-a-II-a">Clasa a II-a</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="materialType">Tip material:</label>
+                    <select id="materialType">
+                        <option value="">Selectează tipul</option>
+                        <option value="lectie">Lecție teoretică</option>
+                        <option value="joc">Joc educațional</option>
+                        <option value="exercitiu">Exercițiu practic</option>
+                        <option value="evaluare">Test evaluare</option>
+                        <option value="resursa">Resursă auxiliară</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="materialDescription">Descriere (opțional):</label>
+                    <textarea id="materialDescription" placeholder="Descriere scurtă a materialului..." rows="3"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="cancelUpload()">Anulează</button>
+                    <button type="button" class="btn-upload" onclick="uploadMaterial()">Încarcă Material</button>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="upload-progress" id="uploadProgress" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="progress-text" id="progressText">0%</span>
+            </div>
+
+            <!-- Lista fișierelor în așteptare -->
+            <div class="pending-files" id="pendingFiles">
+                <h3>📋 Fișiere de încărcat</h3>
+                <div class="files-list" id="filesList">
+                    <!-- Fișierele vor apărea aici -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Materiale recent încărcate -->
+        <div class="recent-uploads">
+            <h3>🕐 Recent Încărcate</h3>
+            <div class="uploads-list" id="uploadsList">
+                <p class="no-uploads">Niciun material încărcat recent</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

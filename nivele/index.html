@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivele de Dificultate - Citire Rapidă</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <a href="../index.html" class="back-button">← Înapoi la Panoul Principal</a>
+            <h1>📚 Nivele de Dificultate</h1>
+            <p>Selectați nivelul pentru care doriți să configurați conținutul</p>
+        </header>
+
+        <div class="levels-grid">
+            <div class="level-card" onclick="openLevel('pregatitoare')">
+                <h3>Pregătitoare</h3>
+                <div class="level-badge">Începător</div>
+                <p>Litere, silabe simple, cuvinte de bază</p>
+                <ul>
+                    <li>Recunoaștere litere</li>
+                    <li>Silabe simple</li>
+                    <li>Cuvinte de 2-3 litere</li>
+                </ul>
+            </div>
+
+            <div class="level-card" onclick="openLevel('clasa-I')">
+                <h3>Clasa I</h3>
+                <div class="level-badge">Intermediar</div>
+                <p>Cuvinte compuse, propoziții simple</p>
+                <ul>
+                    <li>Fluență în citire</li>
+                    <li>Propoziții scurte</li>
+                    <li>Înțelegere text</li>
+                </ul>
+            </div>
+
+            <div class="level-card" onclick="openLevel('clasa-a-II-a')">
+                <h3>Clasa a II-a</h3>
+                <div class="level-badge">Avansat</div>
+                <p>Texte scurte, citire rapidă, comprehensiune</p>
+                <ul>
+                    <li>Citire fluentă</li>
+                    <li>Texte complete</li>
+                    <li>Viteză și acuratețe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

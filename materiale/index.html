@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiale Didactice - Citire Rapidă</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <a href="../index.html" class="back-button">← Înapoi la Panoul Principal</a>
+            <h1>📁 Materiale Didactice</h1>
+            <p>Gestionați resursele pentru cursurile de citire rapidă</p>
+        </header>
+
+        <div class="materials-dashboard">
+            <!-- Card pentru Încărcare -->
+            <div class="material-card upload-card" onclick="navigateTo('upload/index.html')">
+                <div class="card-icon">📤</div>
+                <h3>Încărcare Materiale</h3>
+                <p>Încărcați PDF-uri, imagini, documente pentru fiecare nivel</p>
+                <div class="card-stats">
+                    <span class="stat">Max. 50MB per fișier</span>
+                    <span class="stat">PDF, PNG, JPG, MP3, MP4</span>
+                </div>
+            </div>
+
+            <!-- Card pentru Descărcare -->
+            <div class="material-card download-card" onclick="navigateTo('download/index.html')">
+                <div class="card-icon">📥</div>
+                <h3>Descărcare Materiale</h3>
+                <p>Descărcați resursele existente sau materiale audio/video</p>
+                <div class="card-stats">
+                    <span class="stat">Organizate pe niveluri</span>
+                    <span class="stat">Filtrare și căutare</span>
+                </div>
+            </div>
+
+            <!-- Card pentru Biblioteca -->
+            <div class="material-card library-card">
+                <div class="card-icon">📚</div>
+                <h3>Biblioteca Materialelor</h3>
+                <p>Vizualizați și gestionați toate resursele încărcate</p>
+                <div class="library-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-files">0</span>
+                        <span class="stat-label">Total fișiere</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="total-size">0 MB</span>
+                        <span class="stat-label">Spațiu utilizat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secțiune pentru Materiale Recente -->
+        <div class="recent-materials">
+            <h3>📋 Materiale Recente</h3>
+            <div class="recent-list" id="recent-materials-list">
+                <p class="no-materials">Niciun material încărcat recent</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
